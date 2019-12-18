@@ -11,13 +11,16 @@ let groupMenuRouter = require('./admin/group_menu_router');
 let provinceRouter = require('./business/province_router');
 let locationRouter = require('./business/location_router');
 let lotteryRouter = require('./business/lottery_router');
-let auth = require('../auth')();
+// let auth = require('../auth')();
 
 
 
 router.use('/', homeRouter);
-router.use(auth.authenticate());
+// router.use(auth.authenticate());
 router.use(async (req, res, next) => {
+    req.user = {
+        user_id: 2
+    };
     if (req.user) {
         let menuItems = [];
         let user_id = req.user.user_id;

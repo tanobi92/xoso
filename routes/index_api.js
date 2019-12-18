@@ -6,6 +6,10 @@ let lotteryController = require('../controllers/categories/lottery_controller');
 router.get('/lottery', lotteryController.all);
 
 /* Router API V2 */
-// router.get('/v2/users', apiController.test_api_getuser);
+router.get('/v1/users', function (req, res) {
+	res.json({
+		message: "aaa"
+	})
+});
 
 module.exports = router;

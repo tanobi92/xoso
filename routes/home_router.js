@@ -1,13 +1,13 @@
 var express = require('express');
 const rateLimit = require("express-rate-limit");
 var router = express.Router();
-let auth = require('../auth')();
+// let auth = require('../auth')();
 let homeController = require('../controllers/home_controller');
 
 /* GET home page. */
-router.get('/', auth.authenticate(), async function (req, res) {
-    res.redirect("/categories");
-});
+// router.get('/', auth.authenticate(), async function (req, res) {
+//     res.redirect("/categories");
+// });
 router.get('/login', homeController.login);
 const createAccountLimiter = rateLimit({
     windowMs: 60 * 60 * 1000, // 1 hour window

@@ -191,7 +191,7 @@ class Province extends Base {
             axios.post({
                 url:api.updateProvince,
                 params: body
-            }).then(resp => {
+            }, resp => {
                 loading.finish();
                 if(resp.status === 200) {
                     const data = resp.data;
@@ -205,10 +205,6 @@ class Province extends Base {
                     toastr.error(resp.message);
                 }
                 mdUpdate.modal('hide');
-            }).catch(error => {
-                loading.finish();
-                mdUpdate.modal('hide');
-                toastr.error(error.message);
             });
         });
 

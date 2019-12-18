@@ -89,7 +89,7 @@ class Lottery extends Base {
                     if(_.isNil(_val)) {
                         data[_result] = value;
                     } else {
-                        data[_result] = value?`${_val},${value}` : _val;
+                        data[_result] = `${_val},${value}`;
                     }
                     if(!item.classList.contains('symbol')) {
                         this.splitString(value);
@@ -365,7 +365,7 @@ class Lottery extends Base {
     }
 
     initSocket() {
-        this.socket = io("http://172.27.229.69:3333/lottery");
+        this.socket = io("/lottery");
         this.socket.on('connect', () => {
             // this.socket.emit('hello', 'Hello everyone');
             this.socket.on('hello', function (res) {

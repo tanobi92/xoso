@@ -1,7 +1,7 @@
 let mysql = require('mysql');
 let config = require('./config');
 
-let NODE_ENV = process.env.NODE_ENV || 'development3';
+let NODE_ENV = process.env.NODE_ENV || 'development2';
 
 let connection = mysql.createConnection(config.mysql[NODE_ENV]);
 connection.connect(function (err) {

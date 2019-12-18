@@ -16,9 +16,9 @@ function verifyAPI(req, res, next) {
 		});
 	}
 }
-router.get('/index', lotteryProvinceContrl.index);
+router.get('/', lotteryProvinceContrl.index);
 router.get('/all', lotteryProvinceContrl.get_all);
-router.get('/', lotteryProvinceContrl.get);
+router.get('/get', lotteryProvinceContrl.get);
 router.post('/update', lotteryProvinceContrl.save);
 router.post('/delete', lotteryProvinceContrl.delete);
 router.get('/getByID/:lottery_id', lotteryProvinceContrl.get_by_id);
