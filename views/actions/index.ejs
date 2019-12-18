@@ -1,0 +1,251 @@
+<%- include('../partials/header') %>
+<div class="row wrapper border-bottom white-bg page-heading" xmlns="http://www.w3.org/1999/html">
+    <div class="col-lg-10">
+        <h2><%= __('Actions'); %></h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="/"><%= __('Home'); %></a>
+            </li>
+            <li class="active">
+                <strong><%= __('Actions'); %></strong>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <h5><%= __('Action Confirm'); %></h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-wrench"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="#" class="dropdown-item"><%= __('Config option 1'); %></a>
+                            </li>
+                            <li><a href="#" class="dropdown-item"><%= __('Config option 2'); %></a>
+                            </li>
+                        </ul>
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="dll_lottery_type">Khu vực:</label>
+                                <select class="form-control" name="dll_lottery_type" id="dll_lottery_location">
+                                    <option></option>
+                                    <% locations.forEach(function (item) { %>
+                                        <option value="<%= item.code %>"> <%= item.name %></option>
+                                    <% }) %>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="dll_lottery_type">Loại xổ số:</label>
+                                <select class="form-control" name="dll_lottery_type" id="dll_lottery_type">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="form-group">
+                                <label for="dll_lottery_type">Trạng thái cập nhật</label><br>
+                                <span class="label label-primary">Saved</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row"></div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-8">
+                            <table id="result_table_form" class="table table-bordered table-striped">
+                                <thead>
+                                <tr>
+                                    <th style="width: 20%;">Giải</th>
+                                    <th colspan="12">Kết quả</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="td-title">Giải bảy</td>
+                                    <td colspan="3">
+                                        <input type="text" class="txtGiaibay form-control" name="txtGiaibay1" id="txtGiaibay1" data-mask="99" placeholder="_ _">
+                                    </td>
+                                    <td colspan="3">
+                                        <input type="text" class="txtGiaibay form-control" name="txtGiaibay2" id="txtGiaibay2" data-mask="99" placeholder="_ _">
+                                    </td>
+                                    <td colspan="3">
+                                        <input type="text" class="txtGiaibay form-control" name="txtGiaibay3" id="txtGiaibay3" data-mask="99" placeholder="_ _">
+                                    </td>
+                                    <td colspan="3">
+                                        <input type="text" class="txtGiaibay form-control" name="txtGiaibay4" id="txtGiaibay4" data-mask="99" placeholder="_ _">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td-title">Giải sáu</td>
+                                    <td colspan="4">
+                                        <input type="text" class="txtGiaisau form-control" name="txtGiaisau1" id="txtGiaisau1" data-mask="999" placeholder="_ _ _">
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="txtGiaisau form-control" name="txtGiaisau2" id="txtGiaisau2" data-mask="999" placeholder="_ _ _">
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="txtGiaisau form-control" name="txtGiaisau3" id="txtGiaisau3" data-mask="999" placeholder="_ _ _">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td-title" rowspan="2">Giải năm</td>
+                                    <td colspan="4">
+                                        <input type="text" class="txtGiainam form-control" name="txtGiainam1" id="txtGiainam1" data-mask="9999" placeholder="_ _ _ _">
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="txtGiainam form-control" name="txtGiainam2" id="txtGiainam2" data-mask="9999" placeholder="_ _ _ _">
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="txtGiainam form-control" name="txtGiainam3" id="txtGiainam3" data-mask="9999" placeholder="_ _ _ _">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">
+                                        <input type="text" class="txtGiainam form-control" name="txtGiainam4" id="txtGiainam4" data-mask="9999" placeholder="_ _ _ _">
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="txtGiainam form-control" name="txtGiainam5" id="txtGiainam5" data-mask="9999" placeholder="_ _ _ _">
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="txtGiainam form-control" name="txtGiainam6" id="txtGiainam6" data-mask="9999" placeholder="_ _ _ _">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td-title">Giải tư</td>
+                                    <td colspan="3">
+                                        <input type="text" class="txtGiaitu form-control" name="txtGiaitu1" id="txtGiaitu1" data-mask="9999" placeholder="_ _ _ _">
+                                    </td>
+                                    <td colspan="3">
+                                        <input type="text" class="txtGiaitu form-control" name="txtGiaitu2" id="txtGiaitu2" data-mask="9999" placeholder="_ _ _ _">
+                                    </td>
+                                    <td colspan="3">
+                                        <input type="text" class="txtGiaitu form-control" name="txtGiaitu3" id="txtGiaitu3" data-mask="9999" placeholder="_ _ _ _">
+                                    </td>
+                                    <td colspan="3">
+                                        <input type="text" class="txtGiaitu form-control" name="txtGiaitu4" id="txtGiaitu4" data-mask="9999" placeholder="_ _ _ _">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td-title" rowspan="2">Giải ba</td>
+                                    <td colspan="4">
+                                        <input type="text" class="txtGiaiba form-control" name="txtGiaiba1" id="txtGiaiba1" data-mask="99999" placeholder="_ _ _ _ _">
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="txtGiaiba form-control" name="txtGiaiba2" id="txtGiaiba2" data-mask="99999" placeholder="_ _ _ _ _">
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="txtGiaiba form-control" name="txtGiaiba3" id="txtGiaiba3" data-mask="99999" placeholder="_ _ _ _ _" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">
+                                        <input type="text" class="txtGiaiba form-control" name="txtGiaiba4" id="txtGiaiba4" data-mask="99999" placeholder="_ _ _ _ _">
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="txtGiaiba form-control" name="txtGiaiba5" id="txtGiaiba5" data-mask="99999" placeholder="_ _ _ _ _">
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="txtGiaiba form-control" name="txtGiaiba6" id="txtGiaiba6" data-mask="99999" placeholder="_ _ _ _ _">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="td-title">Giải nhì</td>
+                                    <td colspan="6">
+                                        <input type="text" class="txtGiainhi form-control" name="txtGiainhi1" id="txtGiainhi1" data-mask="99999" placeholder="_ _ _ _ _">
+                                    </td>
+                                    <td colspan="6">
+                                        <input type="text" class="txtGiainhi form-control" name="txtGiainhi2" id="txtGiainhi2" data-mask="99999" placeholder="_ _ _ _ _">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td-title">Giải nhất</td>
+                                    <td colspan="12">
+                                        <input type="text" class="txtGiainhat form-control" name="txtGiainhat" id="txtGiainhat" data-mask="99999" placeholder="_ _ _ _ _">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td-title">Đặc biệt</td>
+                                    <td colspan="12">
+                                        <input type="text" class="txtGiaidacbiet form-control" name="txtGiaidacbiet" id="txtGiaidacbiet" data-mask="99999" placeholder="_ _ _ _ _">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <table id="tb_thongke_dauduoi" class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th style="width: 20%;">Đầu</th>
+                                    <th>Đuôi</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><b class="clnote">0</b></td>
+                                    <td id="dau0"></td>
+                                </tr>
+                                <tr>
+                                    <td><b class="clnote">1</b></td>
+                                    <td id="dau1"></td>
+                                </tr>
+                                <tr>
+                                    <td><b class="clnote">2</b></td>
+                                    <td id="dau2"></td>
+                                </tr>
+                                <tr>
+                                    <td><b class="clnote">3</b></td>
+                                    <td id="dau3"></td>
+                                </tr>
+                                <tr>
+                                    <td><b class="clnote">4</b></td>
+                                    <td id="dau4"></td>
+                                </tr>
+                                <tr>
+                                    <td><b class="clnote">5</b></td>
+                                    <td id="dau5"></td>
+                                </tr>
+                                <tr>
+                                    <td><b class="clnote">6</b></td>
+                                    <td id="dau6"></td>
+                                </tr>
+                                <tr>
+                                    <td><b class="clnote">7</b></td>
+                                    <td id="dau7"></td>
+                                </tr>
+                                <tr>
+                                    <td><b class="clnote">8</b></td>
+                                    <td id="dau8"></td>
+                                </tr>
+                                <tr>
+                                    <td><b class="clnote">9</b></td>
+                                    <td id="dau9"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<%- include('../partials/footer') %>

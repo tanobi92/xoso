@@ -1,0 +1,67 @@
+<div class="footer fixed">
+    <div>
+        <strong>Copyright</strong> I'm Like © 2019
+    </div>
+</div>
+</div>
+</div>
+<!-- Mainly scripts -->
+<script src="/js/jquery-2.1.1.js"></script>
+<script src="/js/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="/js/inspinia.js"></script>
+<!--<script src="/js/plugins/moment/moment.min.js"></script>-->
+
+<!--<script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>-->
+<!--<script src="/js/plugins/dataTables/datatables.min.js"></script>-->
+<!--<script src="/js/plugins/dataTables/dataTables.bootstrap4.min.js"></script>-->
+<!-- iCheck -->
+<!--<script src="/js/plugins/iCheck/icheck.min.js"></script>-->
+
+<!-- Toastr -->
+<script src="/js/plugins/toastr/toastr.min.js"></script>
+
+<!-- Input Mask-->
+<!--<script src="js/plugins/jasny/jasny-bootstrap.min.js"></script>-->
+
+<!--Datetime picker-->
+<!--<script src="/js/plugins/datetimepicker/bootstrap-datetimepicker.min.js"></script>-->
+
+<!--Text Complete-->
+<!--<script src="/js/plugins/textcomplete/jquery.textcomplete.js"></script>-->
+
+<!--Auto Complete-->
+<!--<script src="/js/plugins/autocomplete/jquery.autocomplete.js"></script>-->
+
+<!-- amcharts js -->
+<!--<script src="/js/plugins/amchart/core.js"></script>-->
+<!--<script src="/js/plugins/amchart/charts.js"></script>-->
+<!--<script src="/js/plugins/amchart/plugins/timeline.js"></script>-->
+<!--<script src="/js/plugins/amchart/plugins/bullets.js"></script>-->
+<!--<script src="/js/plugins/amchart/themes/animated.js"></script>-->
+<!--<script src="/js/plugins/select2/select2.full.min.js"></script>-->
+<!--<script src="/js/plugins/select2/js/i18n/vi.js"></script>-->
+<!--<script src="/js/plugins/jquery-confirm/dist/jquery-confirm.min.js"></script>-->
+<!--<script src="/js/plugins/blueimp/jquery.blueimp-gallery.min.js"></script>-->
+<script src="/socket.io/socket.io.js"></script>
+
+<!--Loading-->
+<script src="/js/plugins/pleaseWait/js/please-wait.min.js"></script>
+<script>
+    var mxBasePath = "/js/plugins/diagram/src";
+
+</script>
+
+<% if (typeof scripts !== 'undefined' && scripts.length > 0){ %>
+    <% scripts.forEach(script => { %>
+        <script src="<%= script %>"></script>
+    <% }) %>
+<% } %>
+
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+td hr {
+    margin: 0 !important;
+    border-top: 1px solid #000000 !important;
+}
+#wrap-graph {
+    border: 1px solid #eeeeee;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px #eee;
+    position: relative;
+    min-height: 800px;
+}
+
+#toolbar {
+    border-bottom: 1px solid #eee;
+    padding: 5px;
+    box-shadow: 0px 3px 5px #eee;
+    background: #fbfbfb;
+}
+
+#toolbar img {
+    padding: 5px;
+    margin: 0px;
+}
+
+#toolbar img:hover {
+    background: #eee;
+}
+
+#toolbar img.mxToolbarModeSelected {
+    border: 0px;
+    background: #eee;
+}
+
+#graph-sidebar {
+    border-right: 1px solid #eee;
+    box-shadow: 3px 3px 5px #eee;
+    background: #fbfbfb;
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    left: -1000px;
+    opacity: 0;
+}
+
+#graph {
+    min-height: 800px;
+    width: 100%;
+}

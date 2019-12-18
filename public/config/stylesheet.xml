@@ -1,0 +1,222 @@
+<mxEditor>
+    <mxStylesheet as="stylesheet">
+			<add as="text">
+				<add as="shape" value="rectangle"/>
+				<add as="perimeter" value="rectanglePerimeter"/>
+				<add as="fontSize" value="12"/>
+				<add as="align" value="center"/>
+				<add as="verticalAlign" value="middle"/>
+				<add as="shadow" value="0"/>
+				<add as="strokeColor" value="none"/>
+				<add as="fillColor" value="indicated"/>
+				<add as="gradientColor" value="none"/>
+				<add as="gradientDirection" value="east"/>
+			</add>
+			<add as="defaultVertex" extend="text">
+				<add as="shape" value="rectangle"/>
+				<add as="fontSize" value="10"/>
+				<add as="fontColor" value="black"/>
+				<add as="align" value="center"/>
+				<add as="verticalAlign" value="middle"/>
+<!--				<add as="strokeColor" value="#C3D9FF"/>-->
+				<add as="fillColor" value="#4679B6"/>
+				<add as="gradientColor" value="white"/>
+                <add as="gradientDirection" value="south"/>
+			</add>
+			<add as="group">
+				<add as="shape" value="rectangle"/>
+				<add as="perimeter" value="rectanglePerimeter"/>
+				<add as="fontSize" value="10"/>
+				<add as="align" value="center"/>
+				<add as="verticalAlign" value="middle"/>
+				<add as="strokeColor" value="gray"/>
+				<add as="dashed" value="1"/>
+			</add>
+			<add as="defaultEdge">
+				<add as="shape" value="connector"/>
+				<add as="fontSize" value="10"/>
+				<add as="align" value="center"/>
+				<add as="verticalAlign" value="middle"/>
+				<add as="rounded" value="1"/>
+				<add as="labelBackgroundColor" value="white"/>
+				<add as="strokeColor" value="#36393D"/>
+				<add as="strokeWidth" value="1"/>
+				<add as="edgeStyle" value="elbowEdgeStyle"/>
+				<add as="endArrow" value="classic"/>
+			</add>
+			<add as="verticalConnector">
+				<add as="elbow" value="vertical"/>
+			</add>
+			<add as="straightConnector">
+				<add as="shape" value="connector"/>
+				<add as="endArrow" value="classic"/>
+				<add as="edgeStyle">null</add>
+			</add>
+			<add as="arrowConnector">
+				<add as="shape" value="arrow"/>
+				<add as="fillColor" value="#C3D9FF"/>
+				<add as="endSize" value="20"/>
+				<remove as="edgeStyle"/>
+			</add>
+			<add as="swimlane">
+				<add as="shape" value="swimlane"/>
+				<add as="shadow" value="0"/>
+				<add as="startSize" value="23"/>
+				<add as="align" value="center"/>
+				<add as="verticalAlign" value="top"/>
+				<add as="strokeColor" value="#EEEEEE"/>
+				<add as="fillColor" value="#D4D4D4"/>
+			</add>
+			<add as="rounded">
+				<add as="rounded" value="1"/>
+				<add as="fillColor" value="#83027F"/>
+			</add>
+			<add as="ellipse">
+				<add as="shape" value="ellipse"/>
+				<add as="perimeter" value="ellipsePerimeter"/>
+<!--				<add as="strokeColor" value="#CDEB8B"/>-->
+				<add as="fillColor" value="#66B922"/>
+			</add>
+			<add as="doubleEllipse" extend="ellipse">
+				<add as="shape" value="doubleEllipse"/>
+			</add>
+			<add as="rhombus">
+				<add as="shape" value="rhombus"/>
+				<add as="perimeter" value="rhombusPerimeter"/>
+<!--				<add as="strokeColor" value="#FFCF8A"/>-->
+				<add as="fillColor" value="#fcae49"/>
+			</add>
+			<add as="triangle" extend="rhombus">
+				<add as="shape" value="triangle"/>
+				<add as="perimeter" value="trianglePerimeter"/>
+				<add as="align" value="left"/>
+			</add>
+			<add as="hexagon">
+				<add as="shape" value="hexagon"/>
+			</add>
+			<add as="actor">
+				<add as="shape" value="actor"/>
+				<add as="strokeColor" value="#FFC7C7"/>
+				<add as="fillColor" value="#FFC7C7"/>
+			</add>
+			<add as="cloud">
+				<add as="shape" value="cloud"/>
+				<add as="perimeter" value="ellipsePerimeter"/>
+				<add as="strokeColor" value="#CDEB8B"/>
+				<add as="fillColor" value="#CDEB8B"/>
+			</add>
+			<add as="cylinder">
+				<add as="shape" value="cylinder"/>
+				<add as="spacingTop" value="10"/>
+				<add as="strokeColor" value="#4096EE"/>
+				<add as="fillColor" value="#4096EE"/>
+			</add>
+			<add as="hline">
+				<add as="shape" value="line"/>
+				<add as="strokeWidth" value="3"/>
+				<add as="perimeter" value="rectanglePerimeter"/>
+				<add as="fontColor" value="black"/>
+				<add as="fontSize" value="10"/>
+				<add as="align" value="center"/>
+				<add as="verticalAlign" value="bottom"/>
+				<add as="strokeColor" value="#36393D"/>
+			</add>
+			<add as="image">
+				<add as="shape" value="image"/>
+				<add as="perimeter" value="rectanglePerimeter"/>
+				<add as="fontSize" value="10"/>
+				<add as="align" value="center"/>
+				<add as="verticalAlign" value="middle"/>
+				<add as="image" value="/img/editors/images/draw/mxlogo.jpg"/>
+			</add>
+		</mxStylesheet>
+<!--	<mxStylesheet as="stylesheet">-->
+<!--		<add as="defaultVertex">-->
+<!--			<add as="shape" value="rectangle"/>-->
+<!--			<add as="perimeter" value="rectanglePerimeter"/>-->
+<!--			<add as="fontColor" value="black"/>-->
+<!--			<add as="fontSize" value="10"/>-->
+<!--			<add as="align" value="center"/>-->
+<!--			<add as="verticalAlign" value="middle"/>-->
+<!--			<add as="fillColor" value="indicated"/>-->
+<!--			<add as="indicatorColor" value="swimlane"/>-->
+<!--			<add as="gradientColor" value="white"/>-->
+<!--		</add>-->
+<!--		<add as="group">-->
+<!--			<add as="shape" value="rectangle"/>-->
+<!--			<add as="perimeter" value="rectanglePerimeter"/>-->
+<!--			<add as="fontSize" value="10"/>-->
+<!--			<add as="align" value="center"/>-->
+<!--			<add as="verticalAlign" value="middle"/>-->
+<!--			<add as="strokeColor" value="gray"/>-->
+<!--			<add as="dashed" value="1"/>-->
+<!--		</add>-->
+<!--		<add as="defaultEdge">-->
+<!--			<add as="shape" value="connector"/>-->
+<!--			<add as="fontSize" value="10"/>-->
+<!--			<add as="rounded" value="1"/>-->
+<!--			<add as="strokeColor" value="gray"/>-->
+<!--			<add as="edgeStyle" value="elbowEdgeStyle"/>-->
+<!--			<add as="endArrow" value="classic"/>-->
+<!--		</add>-->
+<!--		<add as="verticalEdge">-->
+<!--			<add as="elbow" value="vertical"/>-->
+<!--		</add>-->
+<!--		<add as="swimlane">-->
+<!--			<add as="shape" value="swimlane"/>-->
+<!--			<add as="perimeter" value="rectanglePerimeter"/>-->
+<!--			<add as="fontSize" value="12"/>-->
+<!--			<add as="startSize" value="36"/>-->
+<!--			<add as="rounded" value="1"/>-->
+<!--			<add as="align" value="center"/>-->
+<!--			<add as="verticalAlign" value="top"/>-->
+<!--			<add as="spacingTop" value="8"/>-->
+<!--			<add as="fontColor" value="white"/>-->
+<!--			<add as="separatorColor" value="#c0c0c0"/>-->
+<!--		</add>-->
+<!--		<add as="rounded">-->
+<!--			<add as="rounded" value="1"/>-->
+<!--		</add>-->
+<!--		<add as="ellipse">-->
+<!--			<add as="shape" value="label"/>-->
+<!--			<add as="indicatorShape" value="ellipse"/>-->
+<!--			<add as="indicatorWidth" value="34"/>-->
+<!--			<add as="indicatorHeight" value="34"/>-->
+<!--			<add as="imageVerticalAlign" value="top"/>-->
+<!--			<add as="imageAlign" value="center"/>-->
+<!--			<add as="spacingTop" value="40"/>-->
+<!--			<add as="perimeter" value="rectanglePerimeter"/>-->
+<!--			<add as="fontSize" value="10"/>-->
+<!--			<add as="align" value="center"/>-->
+<!--			<add as="verticalAlign" value="top"/>-->
+<!--			<add as="indicatorColor" value="swimlane"/>-->
+<!--			<add as="indicatorGradientColor" value="white"/>-->
+<!--			<add as="fillColor" value="none"/>-->
+<!--			<add as="gradientColor" value="none"/>-->
+<!--		</add>-->
+<!--		<add as="rhombus" extend="ellipse">-->
+<!--			<add as="indicatorShape" value="rhombus"/>-->
+<!--		</add>-->
+<!--		<add as="actor" extend="ellipse">-->
+<!--			<add as="indicatorShape" value="actor"/>-->
+<!--			<add as="indicatorWidth" value="26"/>-->
+<!--		</add>-->
+<!--		<add as="cylinder" extend="actor">-->
+<!--			<add as="indicatorShape" value="cylinder"/>-->
+<!--			<add as="imageVerticalAlign" value="bottom"/>-->
+<!--			<add as="indicatorHeight" value="30"/>-->
+<!--			<add as="verticalAlign" value="top"/>-->
+<!--			<add as="spacingTop" value="0"/>-->
+<!--		</add>-->
+<!--		<add as="hline">-->
+<!--			<add as="shape" value="line"/>-->
+<!--			<add as="strokeWidth" value="3"/>-->
+<!--			<add as="perimeter" value="rectanglePerimeter"/>-->
+<!--			<add as="fontColor" value="black"/>-->
+<!--			<add as="fontSize" value="10"/>-->
+<!--			<add as="align" value="center"/>-->
+<!--			<add as="verticalAlign" value="bottom"/>-->
+<!--			<add as="strokeColor" value="indicated"/>-->
+<!--		</add>-->
+<!--	</mxStylesheet>-->
+</mxEditor>

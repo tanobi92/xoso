@@ -1,0 +1,71 @@
+<html><head>
+
+    <meta charset="utf-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title><%= __('Xoso | Register'); %></title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="/css/animate.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+
+<div class="middle-box text-center loginscreen   animated fadeInDown">
+    <div>
+        <div>
+
+            <h1 class="logo-name">XS</h1>
+
+        </div>
+        <h3><%= __('Register to Xoso'); %></h3>
+        <p><%= __('Create account to see it in action.'); %></p>
+        <form class="m-t" role="form" action="#" method="post">
+            <div class="form-group">
+                <input type="text" name="username" class="form-control" placeholder="<%= __('Username'); %>" required="">
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" class="form-control" placeholder="<%= __('Password'); %>" required="">
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" class="form-control" placeholder="<%= __('Email'); %>" required="">
+            </div>
+            <div class="form-group">
+                <input type="text" name="fullname" class="form-control" placeholder="<%= __('Fullname'); %>" required="">
+            </div>
+            <div class="form-group">
+                <input type="text" name="mobile" class="form-control" placeholder="<%= __('Mobile'); %>" required="">
+            </div>I'm LIKE
+            <div class="form-group">
+                <div class="checkbox i-checks"><label> <div class="icheckbox_square-green" style="position: relative;"><input type="checkbox" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div><i></i> <%= __('Agree the terms and policy'); %> </label></div>
+            </div>
+            <button type="submit" class="btn btn-primary block full-width m-b"><%= __('Register'); %></button>
+
+            <p class="text-muted text-center"><small><%= __('Already have an account?'); %></small></p>
+            <a class="btn btn-sm btn-white btn-block" href="/login"><%= __('Login'); %></a>
+        </form>
+        <p class="m-t"> <small><strong>Copyright</strong><span>&nbsp; I'm LIKE © 2019</span></small> </p>
+    </div>
+</div>
+
+<!-- Mainly scripts -->
+<script src="/js/jquery-2.1.1.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<!-- iCheck -->
+<script src="/js/plugins/iCheck/icheck.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.i-checks').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            radioClass: 'iradio_square-green',
+        });
+    });
+</script>
+
+
+</body></html>

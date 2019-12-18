@@ -1,0 +1,143 @@
+<%- include('../partials/header') %>
+<link rel="stylesheet" type="text/css" href="/css/plugins/select2/select2.min.css">
+<link rel="stylesheet" type="text/css" href="/css/plugins/select2/select2-bootstrap.css">
+<link href="/css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
+<link href="/css/plugins/iCheck/custom.css" rel="stylesheet">
+<!--<link href="/dist/css/action-styles.css" rel="stylesheet">-->
+<div class="row wrapper border-bottom white-bg page-heading" xmlns="http://www.w3.org/1999/html">
+    <div class="col-lg-10">
+        <h2><%= __('Actions'); %></h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="/"><%= __('Home'); %></a>
+            </li>
+            <li class="active">
+                <strong><%= __('Actions'); %></strong>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12 no-padding">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <h5><%= __('Lottery Confirm'); %></h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-wrench"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="#" class="dropdown-item"><%= __('Config option 1'); %></a>
+                            </li>
+                            <li><a href="#" class="dropdown-item"><%= __('Config option 2'); %></a>
+                            </li>
+                        </ul>
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="cbxLocation">Khu vực:</label>
+                                <select class="form-control" name="cbxLocation" id="cbxLocation">
+                                    <option></option>
+                                    <% locations.forEach(function (item) { %>
+                                        <option value="<%= item.code %>"> <%= item.name %></option>
+                                    <% }) %>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="cbxProvince">Loại xổ số:</label>
+                                <select class="form-control" name="cbxProvince" id="cbxProvince">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="form-group">
+                                <label for="dll_lottery_type">Trạng thái cập nhật</label><br>
+                                <span class="label label-primary">Saved</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row"></div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-8">
+                            <table id="tblResult" class="table table-bordered table-striped"></table>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <table id="tb_thongke_dauduoi" class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th style="width: 20%;">Đầu</th>
+                                    <th>Đuôi</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><b class="clnote">0</b></td>
+                                    <td id="dau0"></td>
+                                </tr>
+                                <tr>
+                                    <td><b class="clnote">1</b></td>
+                                    <td id="dau1"></td>
+                                </tr>
+                                <tr>
+                                    <td><b class="clnote">2</b></td>
+                                    <td id="dau2"></td>
+                                </tr>
+                                <tr>
+                                    <td><b class="clnote">3</b></td>
+                                    <td id="dau3"></td>
+                                </tr>
+                                <tr>
+                                    <td><b class="clnote">4</b></td>
+                                    <td id="dau4"></td>
+                                </tr>
+                                <tr>
+                                    <td><b class="clnote">5</b></td>
+                                    <td id="dau5"></td>
+                                </tr>
+                                <tr>
+                                    <td><b class="clnote">6</b></td>
+                                    <td id="dau6"></td>
+                                </tr>
+                                <tr>
+                                    <td><b class="clnote">7</b></td>
+                                    <td id="dau7"></td>
+                                </tr>
+                                <tr>
+                                    <td><b class="clnote">8</b></td>
+                                    <td id="dau8"></td>
+                                </tr>
+                                <tr>
+                                    <td><b class="clnote">9</b></td>
+                                    <td id="dau9"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer') %>
+<script src="/js/plugins/select2/select2.full.min.js"></script>
+<script src="/js/plugins/select2/i18n/vi.js"></script>
+<script src="/js/plugins/iCheck/icheck.min.js"></script>
+<script src="/js/plugins/jasny/jasny-bootstrap.min.js"></script>
+<script src="/js/plugins/moment/moment.min.js"></script>
+<script src="/dist/js/lottery.min.js"></script>

@@ -1,0 +1,57 @@
+<html><head>
+
+    <meta charset="utf-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title><%= __('Workflow | Login'); %></title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="/css/animate.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+
+<div class="middle-box text-center loginscreen animated fadeInDown">
+    <div>
+        <div>
+
+            <h1 class="logo-name">XS</h1>
+
+        </div>
+        <h3><%= __('Welcome to Xoso'); %></h3>
+        <!--<p>Perfectly designed and precisely prepared admin theme with over 50 pages with extra new web app views.-->
+        <!--&lt;!&ndash;Continually expanded and constantly improved Inspinia Admin Them (IN+)&ndash;&gt;-->
+        <!--</p>-->
+        <p><%= __('Login in. To see it in action.'); %></p>
+        <form class="m-t" role="form" action="#" method="post">
+            <div class="form-group">
+                <input type="text" name="email" class="form-control" placeholder="Email" required="">
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" class="form-control" placeholder="Password" required="">
+            </div>
+<!--            <div class="form-group">-->
+<!--                <div class="g-recaptcha" data-sitekey="6LdfPsUUAAAAAMqUGWI18hNIts8erkynkVg5hL9s"></div><br>-->
+<!--            </div>-->
+            <input type="submit" class="btn btn-primary block full-width m-b" id="btnLogin"><%= __('Login'); %>
+
+            <a href="#"><small><%= __('Forgot password?'); %></small></a>
+            <p class="text-muted text-center"><small><%= __('Do not have an account?'); %></small></p>
+            <a class="btn btn-sm btn-white btn-block" href="/register"><%= __('Create an account'); %></a>
+        </form>
+        <p class="m-t"> <small><strong>Copyright</strong><span>&nbsp; I'm LIKE © 2019</span></small> </p>
+    </div>
+</div>
+
+<!-- Mainly scripts -->
+<script src="/js/jquery-2.1.1.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+
+</body></html>

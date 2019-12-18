@@ -1,0 +1,90 @@
+<div id="<%= modal %>" class="modal fade" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><%= __('User Info'); %></h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="form-group clearfix">
+                            <label class="col-sm-3 control-label"><%= __('Username'); %></label>
+                            <div class="col-sm-9">
+                                <input id="username" name="username" type="text" placeholder="<%= __('Enter user name'); %>" required="required" class="form-control" />
+                                <input id="_id" name="_id" class="_id" type="hidden" />
+                                <input id="row_id" name="row_id" class="row_id" type="hidden" />
+                            </div>
+                        </div>
+                        <div class="form-group clearfix">
+                            <label class="col-sm-3 control-label"><%= __('Status'); %></label>
+                            <div class="col-sm-9">
+                                <select class="form-control" id="txtStatus" name="txtStatus">
+                                    <option value="1"><%= __('Enable'); %></option>
+                                    <option value="0"><%= __('Disable'); %></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group clearfix">
+                            <label class="col-sm-3 control-label"><%= __('Password'); %></label>
+                            <div class="col-sm-9">
+                                <input id="password" name="password" type="password" class="form-control" placeholder="<%= __('Password'); %>" required="">
+                            </div>
+                        </div>
+                        <div class="form-group clearfix">
+                            <label class="col-sm-3 control-label"><%= __('Confirm Password'); %></label>
+                            <div class="col-sm-9">
+                                <input id="conf_password" name="conf_password" type="password" class="form-control" placeholder="<%= __('Password'); %>" required="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="avata-user small-12 medium-2 large-2 columns">
+                            <div class="circle">
+                                <!-- User Profile Image -->
+                                <img class="profile-pic" src="/upload/avatar/avatar-bg.png">
+                            </div>
+                            <div class="p-image">
+                                <i class="fa fa-camera upload-button"></i>
+                                <input id="user_avatar" name="user_avatar" class="file-upload" type="file" accept="image/*"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <h3>Profile</h3>
+                        <hr/>
+                        <div class="form-group clearfix">
+                            <label class="col-sm-2 control-label"><%= __('Fullname'); %></label>
+                            <div class="col-sm-4">
+                                <input id="fullname" name="fullname" type="text" placeholder="<%= __('Enter Fullname'); %>" required="required" class="form-control" />
+                            </div>
+                            <label class="col-sm-2 control-label"><%= __('Department'); %></label>
+                            <div class="col-sm-4">
+                                <select class="form-control" id="ddlDepartment" name="ddlDepartment">
+                                    <option value="SCC">SCC</option>
+                                    <option value="NOC" >NOC</option>
+                                    <option value="Other" ><%= __('Other'); %></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group clearfix">
+                            <label class="col-sm-2 control-label"><%= __('Email'); %></label>
+                            <div class="col-sm-4">
+                                <input id="email" name="email" type="email" placeholder="email@fpt.com.vn" required="required" class="form-control"/>
+                            </div>
+                            <label class="col-sm-2 control-label">Mobile</label>
+                            <div class="col-sm-4">
+                                <input id="mobile" name="mobile" type="mobile" placeholder="<%= __('Phone number'); %>" required="required" class="form-control"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="btnSave" type="button" class="btn btn-sm btn-primary"><i class="fa fa-save"></i>&nbsp;<%= __('Save'); %></button>
+                <button id="btnCancel" type="button" class="btn btn-sm btn-default" data-dismiss="modal"><%= __('Cancel'); %></button>
+            </div>
+        </div>
+    </div>
+</div>

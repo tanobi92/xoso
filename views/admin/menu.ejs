@@ -1,0 +1,51 @@
+<%- include('../partials/header') %>
+
+<link href="/css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+<script>
+    let data =<%- JSON.stringify(menus) %>;
+</script>
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2><%= __('Users'); %></h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="/"><%= __('Admin'); %></a>
+            </li>
+            <li class="breadcrumb-item">
+                <a><%= __('Menu manager'); %></a>
+            </li>
+            <li class="breadcrumb-item active">
+                <strong><%= __('Menu manager'); %></strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="wrapper wrapper-content animated fadeInUp">
+
+            <div class="ibox">
+                <div class="ibox-title">
+                    <h5><%= __('All Menu'); %></h5>
+                    <div class="ibox-tools">
+                        <a data-toggle="modal" class="btn btn-primary btn-sm m-t-n-xs" href="#menu-modal-form" id="btn_create"><i class="fa fa-plus"></i>&nbsp;<%= __('Create Menu'); %></a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <table id="menus-table" class="menus-table display table table-hover" style="width: 100%;"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include("../partials/confirm_delete_modal.ejs",{idModal:"menu_delete_modal", element:"menu"}) %>
+<%- include('../partials/menu_modal.ejs', {modal: "menu-modal-form"}); %>
+<%- include('../partials/footer') %>
+
+<script src="/js/plugins/dataTables/datatables.min.js"></script>
+<script src="/js/plugins/dataTables/dataTables.bootstrap4.min.js"></script>

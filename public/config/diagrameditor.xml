@@ -1,0 +1,239 @@
+<mxEditor defaultGroup="group" defaultEdge="connector">
+	<include name="/config/editor-commons.xml"/>
+	<add as="onInit"><![CDATA[
+		function ()
+		{
+			onInit(this);
+		}
+	]]></add>
+	<ui>
+		<add as="graph" element="graph"/>
+		<add as="status" element="status"/>
+		<add as="toolbar" element="toolbar"/>
+	</ui>
+	<Array as="cycleAttributeValues">
+		<add value="#83027F"/>
+		<add value="#66B922"/>
+		<add value="#808913"/>
+		<add value="#CF0056"/>
+		<add value="#4679B6"/>
+	</Array>
+	<Array as="templates">
+		<add as="group">
+			<Group label="" href="">
+				<mxCell vertex="1" style="group" connectable="0"/>
+			</Group>
+		</add>
+		<add as="connector">
+			<Connector name="connector" label="" href="">
+				<mxCell edge="1">
+					<mxGeometry as="geometry" relative="1"/>
+				</mxCell>
+			</Connector>
+		</add>
+		<add as="container">
+			<Container name="container" label="Container" href="">
+				<mxCell vertex="1" style="swimlane" connectable="0">
+					<mxGeometry as="geometry" width="200" height="460"/>
+				</mxCell>
+			</Container>
+		</add>
+		<add as="rectangle">
+			<Rect name="rectangle" label="Rectangle" href="">
+				<mxCell vertex="1">
+					<mxGeometry as="geometry" width="160" height="55"/>
+				</mxCell>
+			</Rect>
+		</add>
+		<add as="text">
+			<Text name="text" label="Text Here" href="">
+				<mxCell vertex="1" style="text">
+					<mxGeometry as="geometry" width="80" height="20"/>
+				</mxCell>
+			</Text>
+		</add>
+		<add as="image">
+			<Image label="" href="">
+				<mxCell vertex="1" style="image">
+					<mxGeometry as="geometry" width="80" height="50"/>
+				</mxCell>
+			</Image>
+		</add>
+		<add as="rounded">
+			<Roundrect name="rounded" label="Rounded" href="">
+				<mxCell vertex="1" style="rounded">
+					<mxGeometry as="geometry" width="160" height="55"/>
+				</mxCell>
+			</Roundrect>
+		</add>
+		<add as="ellipse">
+			<Shape name="ellipse" label="" href="">
+				<mxCell vertex="1" style="ellipse">
+					<mxGeometry as="geometry" width="50" height="50"/>
+				</mxCell>
+			</Shape>
+		</add>
+		<add as="rhombus">
+			<Shape name="rhombus" label="Rhombus" href="">
+				<mxCell vertex="1" style="rhombus">
+					<mxGeometry as="geometry" width="150" height="50"/>
+				</mxCell>
+			</Shape>
+		</add>
+		<add as="actor">
+			<Shape name="actor" label="Shape" href="">
+				<mxCell vertex="1" style="actor">
+					<mxGeometry as="geometry" width="40" height="60"/>
+				</mxCell>
+			</Shape>
+		</add>
+		<add as="cloud">
+			<Shape name="cloud" label="Shape" href="">
+				<mxCell vertex="1" style="cloud">
+					<mxGeometry as="geometry" width="80" height="60"/>
+				</mxCell>
+			</Shape>
+		</add>
+		<add as="hline">
+			<Shape label="" href="">
+				<mxCell vertex="1" style="ellipse">
+					<mxGeometry as="geometry" width="60" height="10"/>
+				</mxCell>
+			</Shape>
+		</add>
+	</Array>
+	<mxGraph as="graph" alternateEdgeStyle="verticalConnector" allowLoops="1" dropEnabled="1">
+		<add as="isAutoSizeCell"><![CDATA[
+			function(cell)
+			{
+				return mxUtils.isNode(this.model.getValue(cell), 'text');
+			}
+		]]></add>
+		<add as="isSwimlane"><![CDATA[
+			function (cell)
+			{
+				return mxUtils.isNode(this.model.getValue(cell), 'container');
+			}
+		]]></add>
+		<add as="getTooltipForCell"><![CDATA[
+			function(cell)
+			{
+				var label = cell.getAttribute('label');
+				var style = cell.getStyle();
+			
+				return ((label != null) ? ('<b>' + label +
+						'</b> (' + cell.getId() + ')<br>') : '') +
+						((style != null) ? ('<br>Style: ' + style + '<br>') : '') +
+						'Connections: ' + cell.getEdgeCount()+
+						'<br>Children: ' + cell.getChildCount();
+			}
+		]]></add>
+		<add as="convertValueToString"><![CDATA[
+			function(cell)
+			{
+				return cell.getAttribute('label');
+			}
+		]]></add>
+		<include name="/config/stylesheet.xml"/>
+		<mxGraphModel as="model">
+			<add as="valueForCellChanged"><![CDATA[
+				function(cell, value)
+				{
+					var previous = null;
+					
+					if (value == null || isNaN(value.nodeType))
+					{
+						previous = cell.value.getAttribute('label');
+
+						if (value == null)
+						{
+							cell.value.removeAttribute('label');
+						}
+						else
+						{
+							cell.setAttribute('label', value);
+						}
+					}
+					else
+					{
+						previous = cell.value;
+						cell.value = value;
+					}
+					
+					return previous;
+				}
+			]]></add>
+			<root>
+				<Diagram label="My Diagram" href="http://www.jgraph.com/" id="0">
+					<mxCell/>
+				</Diagram>
+				<Layer label="Default Layer" id="1">
+					<mxCell parent="0"/>
+				</Layer>
+			</root>
+		</mxGraphModel>
+	</mxGraph>
+	<mxDefaultToolbar as="toolbar">
+		<add as="Undo" action="undo" icon="/img/editors/images/undo.gif"/>
+		<add as="Redo" action="redo" icon="/img/editors/images/redo.gif"/>
+		<add as="Cut" action="cut" icon="/img/editors/images/cut.gif"/>
+		<add as="Copy" action="copy" icon="/img/editors/images/copy.gif"/>
+		<add as="Paste" action="paste" icon="/img/editors/images/paste.gif"/>
+		<add as="Delete" action="delete" icon="/img/editors/images/delete.gif"/>
+		<add as="Group" action="group" icon="/img/editors/images/group.gif"/>
+		<add as="Ungroup" action="ungroup" icon="/img/editors/images/ungroup.gif"/>
+		<separator/>
+		<add as="Select" mode="select" icon="/img/editors/images/select.gif"/>
+		<add as="Pan" mode="pan" icon="/img/editors/images/pan.gif"/>
+		<add as="connect" mode="connect" icon="/img/editors/images/connect.gif"><![CDATA[
+			function (editor)
+			{
+				if (editor.defaultEdge != null)
+				{
+					editor.defaultEdge.style = null;
+				}
+			}
+		]]></add>
+		<add as="connect" mode="connect" icon="/img/editors/images/straight.gif"><![CDATA[
+			function (editor)
+			{
+				if (editor.defaultEdge != null)
+				{
+					editor.defaultEdge.style = 'straightConnector';
+				}
+			}
+		]]></add>
+		<add as="connect" mode="connect" icon="/img/editors/images/arrow.gif"><![CDATA[
+			function (editor)
+			{
+				if (editor.defaultEdge != null)
+				{
+					editor.defaultEdge.style = 'arrowConnector';
+				}
+			}
+		]]></add>
+		<separator/>
+		<add as="Text" template="text" icon="/img/editors/images/text.gif"/>
+		<add as="Container" template="container" icon="/img/editors/images/swimlane.gif"/>
+		<add as="Rectangle" template="rectangle" icon="/img/editors/images/rectangle.gif"/>
+		<add as="Rounded" template="rounded" icon="/img/editors/images/rounded.gif"/>
+		<add as="Ellipse" template="ellipse" style="ellipse" icon="/img/editors/images/ellipse.gif"/>
+		<add as="Rhombus" template="rhombus" style="rhombus" icon="/img/editors/images/rhombus.gif"/>
+		<add as="Triangle" template="actor" style="triangle" icon="/img/editors/images/triangle.gif"/>
+		<add as="Hexagon" template="cloud" style="hexagon" icon="/img/editors/images/hexagon.gif"/>
+		<add as="Actor" template="actor" style="actor" icon="/img/editors/images/actor.gif"/>
+		<add as="Cloud" template="cloud" style="cloud" icon="/img/editors/images/cloud.gif"/>
+		<add as="Line" template="hline" style="hline" icon="/img/editors/images/hline.gif"/>
+		<add as="Image" template="image" icon="/img/editors/images/image.gif"/>
+		<separator/>
+		<add as="Fit" action="fit" icon="/img/editors/images/zoom.gif"/>
+		<add as="Zoom In" action="zoomIn" icon="/img/editors/images/zoomin.gif"/>
+		<add as="Zoom Out" action="zoomOut" icon="/img/editors/images/zoomout.gif"/>
+		<add as="Actual Size" action="actualSize" icon="/img/editors/images/zoomactual.gif"/>
+		<add as="Zoom" action="zoom" icon="/img/editors/images/zoom.gif"/>
+		<separator/>
+		<add as="outline" action="toggleOutline" icon="/img/editors/images/outline.gif"/>
+		<add as="Tasks" action="toggleTasks" icon="/img/editors/images/tasks.gif"/>
+		<add as="Console" action="toggleConsole" icon="/img/editors/images/console.gif"/>
+	</mxDefaultToolbar>
+</mxEditor>

@@ -1,0 +1,112 @@
+<%- include('../partials/header') %>
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2><%= __('Users'); %></h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="/"><%= __('Home'); %></a>
+            </li>
+            <li class="breadcrumb-item">
+                <a><%= __('Group'); %></a>
+            </li>
+            <li class="breadcrumb-item active">
+                <strong><%= __('Group User'); %></strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+<div class="form-horizontal">
+    <div class="wrapper wrapper-content  animated fadeInRight">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <h5> <%= __('User'); %> </h5>
+
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label"><%= __('User'); %></label>
+                                    <div class="col-sm-10">
+
+                                        <div class="input-group">
+                                            <input id="userName" type="text" placeholder="<%= __('Enter the user name'); %>" class="form-control">
+                                            <span class="input-group-btn">
+                                                <button id="userNameRefesh" type="button" class="btn"><span class="fa fa-times-circle"></span></button>
+                                            </span>
+                                        </div>
+                                        <input type="hidden" id="selectedUserId" required="required"/>
+                                        <input type="hidden" id="selectedUserName" required="required"/>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <div class="col-lg-offset-2 col-sm-10">
+                                        <button id="searchUser" type="button" class="btn btn-sm btn-primary"><i class="fa fa-search"></i>&nbsp;<%= __('Search'); %></button>
+                                        <button id="resetUser" type="button" class="btn btn-sm btn-primary"><i class="fa fa-refresh"></i>&nbsp;<%= __('Reset'); %></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <p class="small"><i class="fa fa-hand-o-up"></i> <%= __('Drag task between list'); %></p>
+                        <ul class="sortable-list connectList agile-list" id="listUser">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12">
+                <div class="ibox" id="group_modal">
+                    <div class="ibox-title">
+                        <h5><%= __('Group user'); %></h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="ibox-content">
+                        <div class="input-group">
+                            <input id="groupUser" type="text" placeholder="<%= __('Enter the group name'); %>"  class="form-control">
+                            <span class="input-group-btn">
+                                <button id="groupUserRefesh" type="button" class="btn"><span class="fa fa-times-circle"></span></button>
+                             </span>
+                        </div>
+                        <input type="hidden" id="selectedGroupUserId" required="required"/>
+                        <input type="hidden" id="selectedGroupUserName" required="required"/>
+                    </div>
+
+                    <div class="ibox-content">
+                        <p class="small"><i class="fa fa-hand-o-up"></i> <%= __('Drag here to group to script'); %></p>
+                        <ul class="sortable-list connectList agile-list" id="userGroup">
+                        </ul>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <button class="btn btn-primary btn-sm" id="createUserGroup"><i class="fa fa-save"></i>&nbsp;<%= __('Update/Save user to group'); %></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('../partials/footer') %>

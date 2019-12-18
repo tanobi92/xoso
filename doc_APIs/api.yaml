@@ -1,0 +1,148 @@
+openapi: '3.0.0'
+info:
+  version: 1.0.0
+  title: Xoso Doc APIs
+  description: A doc API
+  termsOfService: http://swagger.io/terms/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+  - url: /api
+security:
+  - x-access-token: []
+paths:
+  /province:
+    get:
+      description: Returns provinces by condition. - no limit, offset -> get all
+      operationId: get
+      parameters:
+        - name: limit
+          in: query
+          description: maximum number of results to return
+          required: false
+          schema:
+            type: number
+        - name: offset
+          in: query
+          description: current page
+          required: false
+          schema:
+            type: number
+        - name: province
+          in: query
+          description: province code
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: province response
+          content:
+            application/json:
+              schema:
+                type: array
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /lottery:
+    get:
+      description: Returns lottery by condition
+      operationId: all
+      parameters:
+        - name: date
+          in: query
+          description: date format DD/MM/YYYY
+          required: true
+          schema:
+            type: string
+        - name: province
+          in: query
+          description: province code
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: lottery response
+          content:
+            application/json:
+              schema:
+                type: array
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /categories/province/save:
+    post:
+      description: create or update province
+      operationId: save
+      requestBody:
+        description: create/update to the store
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Province'
+      responses:
+        '200':
+          description: action response
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  schemas:
+    User:
+      required:
+        - limit
+      properties:
+        limit:
+          type: integer
+          format: int32
+
+    Province:
+      required:
+        - name
+        - location
+        - status
+      properties:
+        id:
+          readOnly: true
+          type: number
+        name:
+          type: string
+        code:
+          type: string
+        location:
+          type: string
+        status:
+          type: number
+
+    Error:
+      required:
+        - status
+        - message
+      properties:
+        status:
+          type: integer
+          format: int32
+        message:
+          type: string
+
+  securitySchemes:
+    x-access-token:
+      type: apiKey
+      in: header
+      name: x-access-token

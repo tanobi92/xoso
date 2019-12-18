@@ -1,0 +1,50 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element">
+                    <img alt="image" style="width: 40px; height: 40px; " class="img-circle" src="<%= user.avatar %>">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <span class="block m-t-xs font-bold"><%= user.fullname %></span>
+                        <span class="text-muted text-xs block"><%= user.department %><b class="caret"></b></span>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                        <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                        <li><a class="dropdown-item" href="contacts.html">Contacts</a></li>
+                        <li><a class="dropdown-item" href="mailbox.html">Mailbox</a></li>
+                        <li class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="logo-element">
+                    SCC-WF
+                </div>
+            </li>
+            <% menuItems.forEach(menuItem=>{ %>
+                <li
+                <% if (active_page === menuItem.href || menuItem.items.find((item) => {
+                    return item.href === active_page
+                })) { %> class="active"
+                        <% } %>
+                >
+                    <a href="<%= menuItem.href %>">
+                        <i class="fa <%= menuItem.icon %>"></i>
+                        <span class="nav-label"><%= menuItem.label %></span>
+                        <% if (menuItem.items.length > 0){ %>
+                            <span class="fa arrow"></span>
+                        <% } %>
+                    </a>
+                    <% if (menuItem.items.length > 0){ %>
+                        <ul class="nav nav-second-level">
+                            <% menuItem.items.forEach(item=>{ %>
+                                <li <%= (active_page === item.href ? 'class=active' : '') %>><a
+                                            href="<%= item.href %>"><%= item.label %></a></li>
+                            <% }); %>
+                        </ul>
+                    <% } %>
+                </li>
+            <% }); %>
+        </ul>
+
+    </div>
+</nav>
