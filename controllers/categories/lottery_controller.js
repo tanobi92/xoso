@@ -23,18 +23,238 @@ let lottery_controller = {
             let date = query.date;
             date = moment(date, 'DD/MM/YYYY').format('X');
             let province = query.province;
-            
-            lotteryModel.all({province, date}, (error, resp) => {
-                let data = [];
-                if(resp) {
-                    data = lottery_controller.formatLottery(resp);
-                }
-                result = {
-                    status: 200,
-                    data: data
-                };
-                return res.json(result);
-            });
+            let temp = {
+                "status": 200,
+                "data": [
+                    {
+                        "date": 1576602000,
+                        "createdDate": "2019-12-18T14:13:30.000Z",
+                        "createdBy": null,
+                        "location": "MB",
+                        "locationName": "Xổ số miền Bắc",
+                        "province": "MB_TD",
+                        "provinceName": "Thủ Đô",
+                        "data": [
+                            "1QW",
+                            "2QD",
+                            "1DF",
+                            "87915",
+                            "55464",
+                            "15111",
+                            "31545",
+                            "48162",
+                            "28491",
+                            "84615",
+                            "61841",
+                            "31121",
+                            "78158",
+                            "1205",
+                            "8765",
+                            "1591",
+                            "1549",
+                            "0212",
+                            "8481",
+                            "0132",
+                            "8400",
+                            "0248",
+                            "8423",
+                            "533",
+                            "666",
+                            "351",
+                            "12",
+                            "46",
+                            "63",
+                            "50"
+                        ]
+                    },
+                    {
+                        "date": 1576602000,
+                        "createdDate": "2019-12-18T14:18:44.000Z",
+                        "createdBy": null,
+                        "location": "MN",
+                        "locationName": "Xổ số miền Nam",
+                        "province": "MN_AG",
+                        "provinceName": "An Giang",
+                        "data": [
+                            "21588",
+                            "48781",
+                            "21548",
+                            "21554",
+                            "54848",
+                            "0051",
+                            "8458",
+                            "5158",
+                            "3232",
+                            "1054",
+                            "3569",
+                            "5154",
+                            "0141",
+                            "005",
+                            "021",
+                            "051",
+                            "46",
+                            "78"
+                        ]
+                    },
+                    {
+                        "date": 1576602000,
+                        "createdDate": "2019-12-18T14:18:44.000Z",
+                        "createdBy": null,
+                        "location": "MN",
+                        "locationName": "Xổ số miền Nam",
+                        "province": "MN_HCM",
+                        "provinceName": "Hồ Chí Minh",
+                        "data": [
+                            "21588",
+                            "48781",
+                            "21548",
+                            "21554",
+                            "54848",
+                            "0051",
+                            "8458",
+                            "5158",
+                            "3232",
+                            "1054",
+                            "3569",
+                            "5154",
+                            "0141",
+                            "005",
+                            "021",
+                            "051",
+                            "46",
+                            "78"
+                        ]
+                    },
+                    {
+                        "date": 1576602000,
+                        "createdDate": "2019-12-18T14:18:44.000Z",
+                        "createdBy": null,
+                        "location": "MN",
+                        "locationName": "Xổ số miền Nam",
+                        "province": "MN_VL",
+                        "provinceName": "Vĩnh Long",
+                        "data": [
+                            "21588",
+                            "48781",
+                            "21548",
+                            "21554",
+                            "54848",
+                            "0051",
+                            "8458",
+                            "5158",
+                            "3232",
+                            "1054",
+                            "3569",
+                            "5154",
+                            "0141",
+                            "005",
+                            "021",
+                            "051",
+                            "46",
+                            "78"
+                        ]
+                    },
+                    {
+                        "date": 1576602000,
+                        "createdDate": "2019-12-18T14:18:44.000Z",
+                        "createdBy": null,
+                        "location": "MT",
+                        "locationName": "Xổ số miền Trung",
+                        "province": "MT_DN",
+                        "provinceName": "Đà Nẵng",
+                        "data": [
+                            "21588",
+                            "48781",
+                            "21548",
+                            "21554",
+                            "54848",
+                            "0051",
+                            "8458",
+                            "5158",
+                            "3232",
+                            "1054",
+                            "3569",
+                            "5154",
+                            "0141",
+                            "005",
+                            "021",
+                            "051",
+                            "46",
+                            "78"
+                        ]
+                    },
+                    {
+                        "date": 1576602000,
+                        "createdDate": "2019-12-18T14:18:44.000Z",
+                        "createdBy": null,
+                        "location": "MT",
+                        "locationName": "Xổ số miền Trung",
+                        "province": "MT_KH",
+                        "provinceName": "Khánh Hòa",
+                        "data": [
+                            "21588",
+                            "48781",
+                            "21548",
+                            "21554",
+                            "54848",
+                            "0051",
+                            "8458",
+                            "5158",
+                            "3232",
+                            "1054",
+                            "3569",
+                            "5154",
+                            "0141",
+                            "005",
+                            "021",
+                            "051",
+                            "46",
+                            "78"
+                        ]
+                    },
+                    {
+                        "date": 1576602000,
+                        "createdDate": "2019-12-18T14:18:44.000Z",
+                        "createdBy": null,
+                        "location": "MT",
+                        "locationName": "Xổ số miền Trung",
+                        "province": "MT_PY",
+                        "provinceName": "Phú Yên",
+                        "data": [
+                            "21588",
+                            "48781",
+                            "21548",
+                            "21554",
+                            "54848",
+                            "0051",
+                            "8458",
+                            "5158",
+                            "3232",
+                            "1054",
+                            "3569",
+                            "5154",
+                            "0141",
+                            "005",
+                            "021",
+                            "051",
+                            "46",
+                            "78"
+                        ]
+                    }
+                ]
+            }
+            return res.json(temp);
+            // lotteryModel.all({province, date}, (error, resp) => {
+            //     let data = [];
+            //     if(resp) {
+            //         data = lottery_controller.formatLottery(resp);
+            //     }
+            //     result = {
+            //         status: 200,
+            //         data: data
+            //     };
+            //     return res.json(result);
+            // });
             
         } catch (e) {
             console.log(e);
@@ -49,25 +269,41 @@ let lottery_controller = {
     },
     formatLottery: (data) => {
         let result = [];
-        const cols = ['special', 'first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'symbol'];
+        const cols = ['symbol', 'special', 'first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth'];
         
         _.forEach(data, item => {
             const province = item.province;
-            const date = item.date;
             let find = _.find(result, {province: province});
-           
+            let temp = [];
+
             if(!find) {
-                find = _.cloneDeep(item);
+                find = {
+                    date: item.date,
+                    createdDate: item.createdDate,
+                    createdBy: item.createdBy,
+                    location: item.location,
+                    locationName: item.locationName,
+                    province: item.province,
+                    provinceName: item.provinceName,
+                };
                 result.push(find);
             }
 
             _.forEach(cols, col => {
-                find[col] = lottery_controller.subResult(find[col]);
+                const split = lottery_controller.subResult(item[col]);
+                if(find.location === 'MB') {
+                    if(col !== 'eighth') temp = [...temp, ...split];
+                } else {
+                    if(col !== 'symbol') temp = [...temp, ...split];
+                }
+
             });
+
+            find.data = temp;
 
         });
 
-        return _.sortBy(result, ['province']);
+        return _.sortBy(result, ['location', 'province']);
     },
     subResult: (data) => {
         let result = [];
